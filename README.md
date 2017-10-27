@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Todo list demo:
 
-Things you may want to cover:
 
-* Ruby version
+## Running the app
 
-* System dependencies
+Clone this repo:
 
-* Configuration
+```
+$ git clone https://github.com/twang333/todo-list
+```
 
-* Database creation
+Install all dependancies:
 
-* Database initialization
+```
+$ bundle install
+```
 
-* How to run the test suite
+Create the database and run migrations:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ rake db:create db:migrate
+```
 
-* Deployment instructions
+Start the server:
 
-* ...
+```
+$ rails server
+```
+
+And open the app in your browser at <http://localhost:3000/>.
