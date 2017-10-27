@@ -8,7 +8,7 @@ Todo list demo:
 Clone this repo:
 
 ```
-$ git clone https://github.com/twang333/todo_list
+$ git clone git@github.com:twang333/todo_list.git
 ```
 
 Install all dependancies:
