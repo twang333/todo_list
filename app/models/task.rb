@@ -1,3 +1,3 @@
 class Task < ApplicationRecord
-  enum status: [:new, :complete, :archived]
+  enum status: [:todo, :completed, :archived]
 end
