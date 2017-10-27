@@ -1,0 +1,6 @@
+- task = local
+td = check_box_tag :status, task.status, task.is_completed?, disabled: task.is_archived?, data: {remote: true, url: toggle_task_url(task), method: :patch}
+td = task.status
+td = task.description
+td = link_to 'Edit', edit_task_path(task)
+td = link_to 'Destroy', task, data: { confirm: 'Are you sure?' }, method: :delete

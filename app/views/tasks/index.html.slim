@@ -4,19 +4,16 @@ p#notice = notice
 table
   thead
     tr
+      th
       th Status
       th Description
       th
       th
-      th
 
-  tbody
+  tbody.todo_tasks
     - @tasks.each do |task|
-      tr
-        td = task.status
-        td = task.description
-        td = link_to 'Edit', edit_task_path(task)
-        td = link_to 'Destroy', task, data: { confirm: 'Are you sure?' }, method: :delete
+      tr class=".task#{task.id}"
+        == render 'task', local: task
 
 br
 

@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :edit, :update, :destroy]
+  before_action :set_task, only: [:show, :edit, :update, :destroy, :toggle]
 
   # GET /tasks
   # GET /tasks.json
@@ -49,6 +49,14 @@ class TasksController < ApplicationController
       else
         format.html { render :edit }
         format.json { render json: @task.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def toggle
+    respond_to do |format|
+      if @task.toggle
+        format.js {} 
       end
     end
   end
