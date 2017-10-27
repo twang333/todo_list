@@ -12,7 +12,7 @@ table
 
   tbody.todo_tasks
     - @tasks.each do |task|
-      tr class=".task#{task.id}"
+      tr class="task#{task.id}"
         == render 'task', local: task
 
 br
